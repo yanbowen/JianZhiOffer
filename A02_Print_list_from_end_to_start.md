@@ -6,7 +6,7 @@
 	import java.util.ArrayList;
 	import java.util.Stack;
 	
-	public class A02_DaYinLianBiao {
+	public class A02_Print_list_from_end_to_start {
 		public class ListNode {
 			int val;
 			ListNode next = null;
