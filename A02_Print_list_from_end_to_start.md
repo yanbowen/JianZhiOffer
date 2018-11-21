@@ -1,7 +1,9 @@
 	package offer;
 	
 	/* 
-	 * 输入一个链表，从尾到头打印链表每个节点的值。
+	 * 题目 ：从尾到头打印链表（P58）
+	 * 
+	 * 输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。
 	 * */
 	import java.util.ArrayList;
 	import java.util.Stack;
@@ -16,18 +18,26 @@
 			}
 		}
 	
-		// 递归方式
-		// ArrayList<Integer> arrayList = new ArrayList<Integer>();
-		// public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-		//
-		// if(listNode!=null){
-		// this.printListFromTailToHead(listNode.next);
-		// arrayList.add(listNode.val);
-		// }
-		// return arrayList;
-		// }
+		/**
+		 * 递归方式
+		 */
+		ArrayList<Integer> arrayList = new ArrayList<Integer>();
 	
-		// 栈存储方式
+		public ArrayList<Integer> printListFromTailToHeads(ListNode listNode) {
+	
+			if (listNode != null) {
+				this.printListFromTailToHead(listNode.next);
+				arrayList.add(listNode.val);
+			}
+			return arrayList;
+		}
+	
+		/**
+		 * 栈存储方式
+		 * 
+		 * @param listNode
+		 * @return 链表
+		 */
 	
 		public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
 	
